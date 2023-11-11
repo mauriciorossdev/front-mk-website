@@ -4,10 +4,7 @@ import axios from "axios";
 import SectionDescription, { SectionDescriptionProps } from "@/components/sections/section-description";
 import SectionFeatures from "@/components/sections/section-features";
 import SectionFooter from "@/components/sections/section-footer";
-import SectionTitle, {
-  SectionTitleProps,
-} from "@/components/sections/section-title";
-import Image from "next/image";
+import SectionTitle from "@/components/sections/section-title";
 import { Suspense, useEffect, useState } from "react";
 
 export const Home = () => {
@@ -32,9 +29,7 @@ export const Home = () => {
       image: "/feature-3.jpg",
     },
   ];
-  const description =
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, facilis impedit maxime facere voluptas consequatur labore, repudiandae in, magni cupiditate incidunt sit libero. Adipisci asperiores excepturi a aut commodi culpa!";
-
+  
   const footer = {
     links: [
       { title: "Instagram", url: "#" },
@@ -47,10 +42,10 @@ export const Home = () => {
     let config = {
       method: "get",
       maxBodyLength: Infinity,
-      url: "http://localhost:1337/api/section-hero?populate=*",
+      url: `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/section-hero?populate=*`,
       headers: {
         Authorization:
-          "Bearer 34fc07cce76cef62c4713c7e7032459989c9f03166506ebdf11e8b7e9f4397f719fca20391d1c9263aaac4c2d6ebc050211eec839d7639611b00e079ddc3fea870e2817a706e780988b82b22e273ccddffe7e6345493b44febb9f12c4c3e115deb947a9e0800232d8ccbadd7008caf0a8c34e799fb500ffa3be142a574d44714",
+        `Bearer ${process.env.NEXT_PUBLIC_STRAPI_TOKEN}`,
       },
     };
 
@@ -60,7 +55,7 @@ export const Home = () => {
         setSectionTitleData({
           title: response.data.data.attributes.title,
           image:
-            "http://localhost:1337" +
+          `${process.env.NEXT_PUBLIC_STRAPI_URL}` +
             response.data.data.attributes.image.data.attributes.url,
         });
       })
@@ -73,17 +68,16 @@ export const Home = () => {
     let config = {
       method: "get",
       maxBodyLength: Infinity,
-      url: "http://localhost:1337/api/description",
+      url: `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/description`,
       headers: {
         Authorization:
-          "Bearer 34fc07cce76cef62c4713c7e7032459989c9f03166506ebdf11e8b7e9f4397f719fca20391d1c9263aaac4c2d6ebc050211eec839d7639611b00e079ddc3fea870e2817a706e780988b82b22e273ccddffe7e6345493b44febb9f12c4c3e115deb947a9e0800232d8ccbadd7008caf0a8c34e799fb500ffa3be142a574d44714",
+          `Bearer ${process.env.NEXT_PUBLIC_STRAPI_TOKEN}`	,
       },
     };
 
     await axios
       .request(config)
       .then((response) => {
-        console.log(response.data);
         setSectionDescriptionData({
           description: response.data.data.attributes.description,
         });

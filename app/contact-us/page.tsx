@@ -1,17 +1,15 @@
-"use client";
-
-import Link from "next/link";
 import { useState } from "react";
+import Link from "next/link";
 
-export const ContactUs = () => {
+const ContactUs = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (e:any) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
     // Handle form submission here
-    alert("Formulario Enviado")
+    alert("Formulario Enviado");
   };
 
   return (
@@ -98,12 +96,18 @@ export const ContactUs = () => {
             </button>
           </div>
         </form>
-        <div className="flex flex-col w-full text-center text-indigo-800 font-bold" >
-          <Link href={'/'} className="bg-white border-2 border-indigo-600 w-full py-0 px-4 rounded-lg mb-4 sm:mb-0 sm:w-auto">Volver</Link>
+        <div className="flex flex-col w-full text-center text-indigo-800 font-bold">
+          <Link
+            href={"/"}
+            className="bg-white border-2 border-indigo-600 w-full py-0 px-4 rounded-lg mb-4 sm:mb-0 sm:w-auto"
+          >
+            Volver
+          </Link>
         </div>
       </div>
     </div>
   );
 };
+
 
 export default ContactUs;
