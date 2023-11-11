@@ -15,7 +15,7 @@ const myImageLoader = ({ src, width, quality }: { src: string, width: number, qu
 export const SectionTitle = ({ title, image }: SectionTitleProps) => {
   return (
     <div className="flex flex-col items-center justify-center w-full mb-8">
-      <h2 className="text-4xl font-bold md:mb-12 mb-8">{title}</h2>
+      <h2 className="text-4xl font-bold md:mb-12 mb-8 text-indigo-950">{title}</h2>
       <div className="w-full h-72 relative">
         <Image
           loader={myImageLoader}

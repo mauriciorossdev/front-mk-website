@@ -98,9 +98,8 @@ export const ContactUs = () => {
             </button>
           </div>
         </form>
-        <div className="flex w-full text-center text-indigo-800 font-bold" >
-        <Link href={'/'} className="bg-white border-2 border-indigo-600 w-full py-0 px-4 rounded-lg">Volver</Link>
-
+        <div className="flex flex-col w-full text-center text-indigo-800 font-bold" >
+          <Link href={'/'} className="bg-white border-2 border-indigo-600 w-full py-0 px-4 rounded-lg mb-4 sm:mb-0 sm:w-auto">Volver</Link>
         </div>
       </div>
     </div>

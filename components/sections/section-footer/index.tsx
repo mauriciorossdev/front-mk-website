@@ -20,7 +20,7 @@ export const SectionFooter = (props: SectionFooterProps) => {
             <Link
               href={link.url}
               key={index}
-              className="min-w-[150px] p-2 px-8 bg-lime-700 text-white text-center rounded-md"
+              className="min-w-[150px] p-2 px-8 bg-indigo-700 text-white text-center rounded-md"
             >
               {link.title}
             </Link>

@@ -10,7 +10,7 @@ export const SectionFeatures = (props: SectionFeaturesProps) => {
       {props.features.map((feature, index) => {
         return (
           <div key={index} className="my-8">
-            <p className="my-4 text-lg font-semibold text-center">{feature.title}</p>
+            <p className="my-4 md:text-lg text-2xl font-semibold text-center">{feature.title}</p>
             <div className="w-full relative h-60">
               <Image
                 src={feature.image}
