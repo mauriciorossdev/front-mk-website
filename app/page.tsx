@@ -1,20 +1,23 @@
 "use client";
 
 import axios from "axios";
-import SectionDescription, { SectionDescriptionProps } from "@/components/sections/section-description";
+import SectionDescription, {
+  SectionDescriptionProps,
+} from "@/components/sections/section-description";
 import SectionFeatures from "@/components/sections/section-features";
 import SectionFooter from "@/components/sections/section-footer";
 import SectionTitle from "@/components/sections/section-title";
 import { Suspense, useEffect, useState } from "react";
 
-export const Home = () => {
+export default function Home() {
   const [SectionTitleData, setSectionTitleData] = useState({
     title: "",
     image: "",
   });
-  const [SectionDescriptionData, setSectionDescriptionData] = useState<SectionDescriptionProps>({
-    description: "",
-  })
+  const [SectionDescriptionData, setSectionDescriptionData] =
+    useState<SectionDescriptionProps>({
+      description: "",
+    });
   const features = [
     {
       title: "Adopcion de perros",
@@ -29,7 +32,7 @@ export const Home = () => {
       image: "/feature-3.jpg",
     },
   ];
-  
+
   const footer = {
     links: [
       { title: "Instagram", url: "#" },
@@ -44,8 +47,7 @@ export const Home = () => {
       maxBodyLength: Infinity,
       url: `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/section-hero?populate=*`,
       headers: {
-        Authorization:
-        `Bearer ${process.env.NEXT_PUBLIC_STRAPI_TOKEN}`,
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_TOKEN}`,
       },
     };
 
@@ -55,7 +57,7 @@ export const Home = () => {
         setSectionTitleData({
           title: response.data.data.attributes.title,
           image:
-          `${process.env.NEXT_PUBLIC_STRAPI_URL}` +
+            `${process.env.NEXT_PUBLIC_STRAPI_URL}` +
             response.data.data.attributes.image.data.attributes.url,
         });
       })
@@ -70,8 +72,7 @@ export const Home = () => {
       maxBodyLength: Infinity,
       url: `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/description`,
       headers: {
-        Authorization:
-          `Bearer ${process.env.NEXT_PUBLIC_STRAPI_TOKEN}`	,
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_TOKEN}`,
       },
     };
 
@@ -85,7 +86,7 @@ export const Home = () => {
       .catch((error) => {
         console.log(error);
       });
-  }
+  };
 
   useEffect(() => {
     getTitle();
@@ -102,6 +103,4 @@ export const Home = () => {
       <SectionFooter links={footer.links} button={footer.button} />
     </main>
   );
-};
-
-export default Home;
+}
