@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-type SectionFeaturesProps = {
+export interface SectionFeaturesProps {
   features: Array<{ title: string; image: string }>;
 };
 

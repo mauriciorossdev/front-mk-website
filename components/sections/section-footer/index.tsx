@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export type SectionFooterProps = {
+export interface SectionFooterProps {
   links: Array<{
     title: string;
     url: string;

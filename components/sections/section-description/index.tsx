@@ -1,5 +1,5 @@
-
-type SectionDescriptionProps = {
+"use client";
+export interface SectionDescriptionProps {
     description: string;
 }
 

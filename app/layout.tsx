@@ -16,6 +16,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <meta charSet="utf-8" />
+        <link rel="icon" href="/favicon.ico" />
+        <title>Adopt-Me</title>
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   )
