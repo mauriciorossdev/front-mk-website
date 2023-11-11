@@ -13,7 +13,7 @@ export interface SectionFooterProps {
 
 export const SectionFooter = (props: SectionFooterProps) => {
   return (
-    <div className="flex flex-col items-center justify-center w-full my-12">
+    <div className="flex flex-col items-center justify-center w-full mb-12">
       <div className="flex justify-around w-full my-8">
         {props.links.map((link, index) => {
           return (
