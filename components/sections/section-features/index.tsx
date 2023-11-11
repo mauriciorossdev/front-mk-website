@@ -6,7 +6,7 @@ export interface SectionFeaturesProps {
 
 export const SectionFeatures = (props: SectionFeaturesProps) => {
   return (
-    <div className="md:flex justify-between w-full md:my-12 my-6">
+    <div className="md:flex justify-between w-full md:my-12 my-6 md:px-24 px-8">
       {props.features.map((feature, index) => {
         return (
           <div key={index} className="my-8">

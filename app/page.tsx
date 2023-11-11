@@ -98,7 +98,7 @@ export const Home = () => {
     getDescriptions();
   }, []);
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between md:px-24 px-8  md:pt-24 pt-8 ">
+    <main className="flex min-h-screen flex-col items-center justify-between md:pt-24 pt-8 ">
       <SectionTitle
         title={SectionTitleData.title}
         image={SectionTitleData.image}
