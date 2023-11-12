@@ -63,6 +63,10 @@ export default function Home() {
       })
       .catch((error) => {
         console.log(error);
+        setSectionTitleData({
+          title: "Esta es un titulo de prueba, por favor cambialo",
+          image: "/perro-gato-title.png",
+        });
       });
   };
 
@@ -85,6 +89,9 @@ export default function Home() {
       })
       .catch((error) => {
         console.log(error);
+        setSectionDescriptionData({
+          description: "Esta es una descripción de prueba, por favor cambiala",
+        });
       });
   };
 

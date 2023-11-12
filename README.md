@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# FRONT Marketing Website
+
+## MK Pet Adoption Website
+
+Welcome to the MK Pet Adoption Website repository! This project is built using Next.js with Tailwind CSS, offering a fast, responsive, and attractive platform to facilitate the adoption of pets.
+
+## About the Project
+
+This website is designed to connect adorable pets waiting for a forever home with prospective pet owners. It provides a user-friendly interface to browse pets based on various criteria, view detailed profiles, and learn about the adoption process.
+
+## Features
+
+- **Add Section Title (hero):** Add a section title with title and image.
+- **Add Section Description:** Add a section description with a text.
+- **Add Section Feature :** Add a section feature with arrays of feature.
+- **Add Section Footer:** Add a section footer with a array links and button to contact us.
+- **Add Page Contact Us:** Add a new page with a form for contact us
 
 ## Getting Started
 
-First, run the development server:
+To get a local copy up and running, follow these simple steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Attention
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+If you see a title and description on the web demo that indicate that it is a test, it is because the strapi server is offline or the keys were deprecated, but, you can clone from the strapi project repo (https://github.com/mauriciorossdev/strapi-mk-website) and launch it on your local.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Node.js 12.22.0 or later
+- npm 7.x or yarn 1.x
 
-## Learn More
+### Installation
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/mauriciorossdev/front-mk-website.git
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Install NPM packages:
+    ```
+    npm install
+    ```
+    or if you're using yarn:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+    ```
+    yarn install
+    ```
+    Start the development server:
 
-## Deploy on Vercel
+    ```
+    npm run dev
+    ```
+    or with yarn:
+    ```
+    yarn dev
+    ```
+Contributing
+We welcome contributions to make our project even better. Here's how you can contribute:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Fork the Project
+Create your Feature Branch (git checkout -b feature/AmazingFeature)
+Commit your Changes (git commit -m 'Add some AmazingFeature')
+Push to the Branch (git push origin feature/AmazingFeature)
+Open a Pull Request
+License
+Distributed under the MIT License. See LICENSE for more information.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Contact
+Mauricio Ross (NullPointer.Ross) - @nullPointerRoss - mauriciorossdev@gmail.com
+
+Project Link: https://github.com/mauriciorossdev/front-mk-website
+
+Acknowledgements
+Next.js
+Tailwind CSS
+
