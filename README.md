@@ -26,8 +26,6 @@ If you see a title and description on the web demo that indicate that it is a te
 
 ### Prerequisites
 
-- Node.js 12.22.0 or later
-- npm 7.x or yarn 1.x
 
 ### Installation
 
