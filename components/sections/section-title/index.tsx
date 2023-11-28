@@ -1,29 +1,34 @@
 "use client";
 import Image from "next/image";
+import styles from "./section-title.module.scss";
+import { myImageLoader } from "@/utils/loader";
 
 // import myImageLoader from "@/utils/loader";
 
 export interface SectionTitleProps {
   title: string;
+  subtitle:string;
   image: string;
 }
 
-const myImageLoader = ({ src, width, quality }: { src: string, width: number, quality?: number }) => {
-  return `${src}?w=${width}&q=${quality || 75}`;
-};
 
-export const SectionTitle = ({ title, image }: SectionTitleProps) => {
+export const SectionTitle = ({ title, image, subtitle }: SectionTitleProps) => {
   return (
-    <div className="flex flex-col items-center justify-center w-full mb-8">
-      <h2 className="text-4xl font-bold md:mb-12 mb-8 text-indigo-950">{title}</h2>
-      <div className="w-full h-72 relative">
+    <div className={`flex items-center justify-around w-full mb-8 ${styles.sectionTitle}`}>
+      <div className="w-[40%]">
+        <h1 className="text-4xl font-bold md:mb-12 mb-8 text-indigo-950">
+          {title}
+        </h1>
+        <p dangerouslySetInnerHTML={{__html:subtitle}}></p>
+      </div>
+      <div className="w-[40%] h-72 relative">
         <Image
           loader={myImageLoader}
           src={image}
           alt="Section Title"
           fill={true}
-          style={{ objectFit: "cover", objectPosition: "0 15%" }}
-          className="w-32"
+          style={{ objectFit: "cover" }}
+          className="w-32 rounded-lg"
         />
       </div>
     </div>
