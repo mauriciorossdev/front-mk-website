@@ -1,9 +1,13 @@
 'use client';
 import { useSearchParams,usePathname } from 'next/navigation'
 
+export interface AdoptionPageProps {
+  params: {
+    id: string;
+  };
+}
 
-export const AdoptionPage = (props) => {
-    console.log(props.params.id)
+export const AdoptionPage = (props:AdoptionPageProps) => {
   return (
     <div>
       <h1>Adoption Page {props.params.id} </h1>
