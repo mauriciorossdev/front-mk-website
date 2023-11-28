@@ -107,6 +107,7 @@ export default function Home() {
           image:
             `${process.env.NEXT_PUBLIC_STRAPI_URL}` +
             response.data.data.attributes.image.data.attributes.url,
+          subtitle: response.data.data.attributes.subtitle,
         });
       })
       .catch((error) => {
@@ -114,6 +115,8 @@ export default function Home() {
         setSectionTitleData({
           title: "Esta es un titulo de prueba, por favor cambialo",
           image: "/perro-gato-title.png",
+          subtitle:
+            "Esta es una descripción de prueba, por favor cambiala",
         });
       });
   };
